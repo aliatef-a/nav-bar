@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#00005a, #001);
+    height: 100vh;
+}
+
+section {
+    background: url(stars1.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-top: 50;
+}
+
+ul {
+    text-align: center;
+}
+
+ul:hover li a {
+    opacity: 0;
+}
+
+ul li {
+    list-style: none;
+    margin: 14px 0;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background: darkblue;
+    padding: 30px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 200px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+ul li a:hover {
+    transform: scale(1.5);
+    background: rgb(166, 4, 4);
+    opacity: 1;
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin-top: -11%;
+    
+
+}
+ul li::after {
+    content: 'Bosy Marblla';
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    letter-spacing: 50px;
+    transition: 0.5s;
+    
+}
+
+ul li:hover:after {
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+
+ul li::before , img{
+    content: '';
+    width: 180px;
+    height: 80px;
+    background: #958b8b;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,70%);
+    border-radius: 50px;
+    box-shadow: 0 0 80px red;
+    opacity: 0;
+    transition: 0.5s;
+} 
+
+ul li:hover:before , img {
+    opacity: 0.8;
+    width: 80px;
+}
+
+@media (max-width : 790px) {
+    img{
+        width: 100px;
+        height: 100px;
+        margin-top: -50%;
+        
+    }    
+}
